@@ -2,14 +2,15 @@ import React from "react";
 
 
 const Title = (props) =>{
-    console.log("I am the prop from title", props)
+    console.log("I am the prop from title", props.data)
+    // const data = props.data
 
 
     return(
         <div>
-            {/* <h1> Title:{props.data} </h1> */}
-            {/* <p> Explanation:{props.data.explanation} </p>
-            <h4>Copyright:{props.data.copyright} </h4> */}
+             {/* <h1> Title:{data.date} </h1> 
+            <p> Explanation:{data.explanation} </p> 
+            <h4>Copyright:{data.copyright} </h4>  */}
         </div>
     )
 }
