@@ -8,14 +8,14 @@ import Title from "./Title";
 const CardContainer = ()=>{
 
  //set use state
- const [data, setDatas] = useState({devin: "loves birds"})
+ const [data, setData] = useState({devin: "loves birds"})
  
  useEffect(() =>{
-   Axios.get(`https://api.nasa.gov/planetary/apod?api_key=d7vR94dC3m7ToIF8qhgKtyFeNHMrkcAH2YMaClzi&date=2000-02-02`)
+//    Axios.get(`https://api.nasa.gov/planetary/apod?api_key=2Gh0HpadvXbbjGgGhn8aUAVzCwgQsZvhE7EvnY5M`)
    .then(Response =>{
      console.log ("I am a axios call from CardContainer", Response.data)
      setData(Response.data)
-   }, [])
+   },[])
 
    .catch(Error =>{
      console.log("Picture can not be displayed", Error)
