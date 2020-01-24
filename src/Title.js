@@ -1,6 +1,15 @@
 import React from "react";
-import {Card, CardText, CardTitle, CardSubtitle} from 'reactstrap';
-import {Container} from "reactstrap";
+
+import { Card, CardHeader, CardFooter, CardBody,
+    CardTitle, CardText } from 'reactstrap';
+
+
+
+// import {
+//     Card, CardText, CardBody,
+//     CardTitle, CardSubtitle
+//   } from 'reactstrap';
+
 
 
 
@@ -11,22 +20,29 @@ const Title = (props) =>{
 
     return(
         <Card>
-       
-       <Container>
-       <CardTitle><big>"NASA" PICTURE OF THE DAY!</big></CardTitle>          
+          {/* <CardBody>
+          <CardTitle><big>"NASA" PICTURE OF THE DAY!</big></CardTitle>
+          </CardBody>
+          <CardBody>
           <CardSubtitle>{props.data.title}</CardSubtitle>
           <CardSubtitle><small>Copyright:{props.data.copyright}</small></CardSubtitle>
+       
           <CardText>{props.data.explanation}</CardText>
-        </Container>
+          
+        </CardBody> */}
+
+        <CardHeader><big>"NASA" PICTURE OF THE DAY!</big></CardHeader>
+        <CardBody>
+          <CardTitle>{props.data.title}</CardTitle>
+          <CardText>{props.data.explanation}</CardText>
+          
+        </CardBody>
+        <CardFooter><small>Copyright:{props.data.copyright}</small></CardFooter>
        
       </Card>
 
 
-        // <div>
-        //     <h2> Title:{props.data.title} </h2> 
-        //     <p> Explanation:{props.data.explanation} </p> 
-        //     <h4>Copyright:{props.data.copyright} </h4> 
-        // </div>
+        
     )
 }
 
