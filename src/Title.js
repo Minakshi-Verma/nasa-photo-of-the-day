@@ -3,6 +3,8 @@ import React from "react";
 import { Card, CardHeader, CardFooter, CardBody,
     CardTitle, CardText } from 'reactstrap';
 
+import styled from "styled-components";
+
 
 
 // import {
@@ -11,6 +13,24 @@ import { Card, CardHeader, CardFooter, CardBody,
 //   } from 'reactstrap';
 
 
+const HeaderDiv = styled.div`
+    width: 100%;
+    color: #668cff;
+    text-align: center;
+`;
+
+const ParaDiv = styled.div`
+text-align: justify;
+color: black;
+`;
+
+const TitleDiv = styled.div`
+ color: black;
+ background-color: orange;
+ font-size: 1.5rem;
+ margin-top: 1%;
+
+`;
 
 
 const Title = (props) =>{
@@ -19,28 +39,23 @@ const Title = (props) =>{
 
 
     return(
-        <Card>
-          {/* <CardBody>
-          <CardTitle><big>"NASA" PICTURE OF THE DAY!</big></CardTitle>
-          </CardBody>
-          <CardBody>
-          <CardSubtitle>{props.data.title}</CardSubtitle>
-          <CardSubtitle><small>Copyright:{props.data.copyright}</small></CardSubtitle>
-       
-          <CardText>{props.data.explanation}</CardText>
-          
-        </CardBody> */}
-
-        <CardHeader><big>"NASA" PICTURE OF THE DAY!</big></CardHeader>
+        <HeaderDiv>
+        <Card>                     
+        <TitleDiv><CardHeader><big>{props.data.title}</big></CardHeader></TitleDiv>
         <CardBody>
-          <CardTitle>{props.data.title}</CardTitle>
-          <CardText>{props.data.explanation}</CardText>
-          
+          {/* <CardTitle></CardTitle> */}
+          <ParaDiv><CardText>{props.data.explanation}</CardText></ParaDiv>          
         </CardBody>
-        <CardFooter><small>Copyright:{props.data.copyright}</small></CardFooter>
+        <CardFooter>Copyright:{props.data.copyright}</CardFooter>
        
       </Card>
-
+      </HeaderDiv>
+     
+    //  <div>          
+    //     <h2>Title: {props.data.title}</h2>
+    //     <p>Explanation:{props.data.explanation} </p>
+    //     <h4>Copyright: {props.data.copyright} </h4>
+    // </div>
 
         
     )

@@ -2,7 +2,17 @@ import React , {useState, useEffect} from "react"; //imported useStates
 import Axios from "axios" //imported axios
 import NasaCard from "./NasaCard";
 import Title from "./Title";
-import { Container, Col} from "reactstrap";
+import {Container, Col} from "reactstrap";
+import styled from "styled-components";
+
+const NasaDiv = styled.div`
+    background-color: black;
+    padding:1%;
+    width: 97%;
+    margin-left:1.5%;
+    color: orange;
+    font-size: 2rem;
+`;
 
 
 
@@ -26,9 +36,10 @@ const CardContainer = ()=>{
    console.log("I am the data from cardContainer", data)
 
     return (
+      
       <Container>
         
-        
+        <NasaDiv><big>"NASA" PICTURE OF THE DAY!</big></NasaDiv>
         <Col><Title data = {data}/>
         <NasaCard data = {data}/>
         </Col>

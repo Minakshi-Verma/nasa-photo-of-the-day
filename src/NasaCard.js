@@ -1,21 +1,31 @@
 import React from "react";
 import {Card, CardImg} from 'reactstrap';
+import styled from "styled-components";
+
+
+const ImageDiv = styled.div`
+    width: 100%;
+    
+`;
+
 
 const NasaCard = (props) =>{
     console.log ("I am the props from the card", props)
-//  const data = props.data
-//  console.log(data)
-    return (
 
+  
+
+    return (
+        <ImageDiv>
         <Card>
         <CardImg top width="100%" src={props.data.hdurl} alt="Card image cap" />    
         </Card>
+        </ImageDiv>
 
-        // <div>
+        // <ImageDiv>
            
         //     <img src = {props.data.hdurl} alt = "NASA" />
 
-        // </div>
+        // </ImageDiv>
     )
 }
 export default NasaCard
